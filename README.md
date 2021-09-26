@@ -1,34 +1,29 @@
-# firstRepository
-У лукоморья дуб зелёный;
-Златая цепь на дубе том:
-И днём и ночью кот учёный
-Всё ходит по цепи кругом;
-Идёт направо — песнь заводит,
-Налево — сказку говорит.
-Там чудеса: там леший бродит,
-Русалка на ветвях сидит;
-Там на неведомых дорожках
-Следы невиданных зверей;
-Избушка там на курьих ножках
-Стоит без окон, без дверей;
-Там лес и дол видений полны;
-Там о заре прихлынут волны
-На брег песчаный и пустой,
-И тридцать витязей прекрасных
-Чредой из вод выходят ясных,
-И с ними дядька их морской;
-Там королевич мимоходом
-Пленяет грозного царя;
-Там в облаках перед народом
-Через леса, через моря
-Колдун несёт богатыря;
-В темнице там царевна тужит,
-А бурый волк ей верно служит;
-Там ступа с Бабою Ягой
-Идёт, бредёт сама собой,
-Там царь Кащей над златом чахнет;
-Там русский дух… там Русью пахнет!
-И там я был, и мёд я пил;
-У моря видел дуб зелёный;
-Под ним сидел, и кот учёный
-Свои мне сказки говорил.
+— Je regardai, couleur de cire,
+Un petit rayon buissonnier
+Papillonner dans son sourire
+Et sur son sein, — mouche au rosier.
+
+— Je baisai ses fines chevilles.
+Elle eut un doux rire brutal
+Qui s’égrenait en claires trilles,
+Un joli rire de cristal.
+
+Les petits pieds sous la chemise
+Se sauvèrent : « Veux-tu finir ! »
+— La première audace permise,
+Le rire feignait de punir !
+
+— Pauvrets palpitants sous ma lèvre,
+Je baisai doucement ses yeux :
+— Elle jeta sa tête mièvre
+En arrière : « Oh ! c’est encor mieux !…
+
+Monsieur, j’ai deux mots à te dire… »
+— Je lui jetai le reste au sein
+Dans un baiser, qui la fit rire
+D’un bon rire qui voulait bien…
+
+— Elle était fort déshabillée
+Et de grands arbres indiscrets
+Aux vitres jetaient leur feuillée
+Malinement, tout près, tout près.
