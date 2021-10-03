@@ -1,0 +1,404 @@
+// Абстракція
+
+class Build{
+    var quantityOfWindows: Int
+    var quantityOfWalls: Int
+    var quantityOfFloors: Int
+    var street: Int
+    var isBuldind: bool
+    
+    func ruinBuild(){
+        print ("This building does not exist anymore")
+    }
+    
+    func addFloor() {
+        quantityOfFloors += 1
+        print ("Here are \(quantityOfFloors) floors")
+    }
+    
+    func fixLift(){
+        print("Lift fixed")
+    }
+}
+
+
+class Program{
+    var storage: Float
+    var mobility: bool
+    var crossPlatform: String
+    var isGame: bool
+    
+    func printAuthors(){
+        print("Authors are: \(var authors)")
+    }
+    
+    func printStorage(){
+        print("Here is \(storage) mb")
+    }
+    
+    func giveFeedback(){
+        print("You can tell about this program here: \(var site)")
+    }
+}
+
+
+class Film{
+    var rating: Float
+    var director: String
+    var mainActor: String
+    
+    func rate(){
+        print("leave feedback here: \(site)")
+    }
+    
+    func watch(){
+        print("Now you're watching this film")
+    }
+    
+    func seeFeedback(){
+        print("The rating is: \(rating)")
+    }
+    
+    func addToFavourites(){
+        print("Film added to your list of favourites")
+    }
+}
+
+
+class Device{
+    var destiny: String
+    var isUseful: bool
+    var weight: Float
+    var color: String
+    var price: Float
+    
+    func clean(){
+        print("Your device is clean")
+    }
+    
+    func update(){
+        print("Your device has been updated to the last version of software")
+    }
+    
+    func close(){
+        print("Your device closed")
+    }
+    
+    func turnOff(){
+        print("Your device has been turned off")
+    }
+}
+
+
+class Human{
+    var gender: String
+    var isAlive: bool
+    var isFamous: bool
+    var quantityOfFriends: Int
+    var weight: Float
+    var high: Float
+    
+    func dressUp(){
+        print("Now you're dressed up")
+    }
+    
+    func goToDoctor(){
+        print("You went to the doctor")
+    }
+    
+    func tellAJoke(){
+        print("I'm telling a joke")
+    }
+}
+
+
+
+// Наслідування
+class Figurine{
+    var material: String
+    var size: (Float, Float)
+    var isColoured: bool
+    var placeOfStading: String
+    
+    func brokeUp(){
+        print("The figure has broked up")
+    }
+    
+    func changePlace(){
+        print("Place of standing has changed")
+    }
+    
+    func sell(){
+        print("The figure has been sold")
+    }
+}
+
+
+class Camel: Figurine{
+    var quantityOfHumps: Int
+    
+    func cleanUp(){
+        print("The figure has been cleaned up")
+    }
+}
+
+class Doll: Figurine{
+    var name: String
+    var eyeColor: String
+    
+    func play(){
+        print("Now you're playing with doll")
+    }
+    
+    func brushHair(){
+        print("Now you're brushing doll's hair")
+    }
+}
+
+
+class Student{
+    var name: String
+    var age: Int
+    var fieldOfStudy: String
+    
+    func doHomework(){
+        print("Student is doing homework now")
+    }
+    
+    func missLessons(){
+        print("Student is missing lessons now")
+    }
+}
+
+
+class Freshman: Student{
+    var rating: Float
+    
+    func makeFriends(){
+        print("Freshman is making friends")
+    }
+    
+    func learnTeachersName(){
+        print("Freshman is learning teachers name")
+    }
+}
+
+
+class Graduate: Student{
+    var isGoldenMedalReceiver: bool
+    
+    func chooseCeremonialCostume(){
+        print("Student is choosing...")
+    }
+}
+
+
+class Button{
+    var shape: String
+    var name: String
+    var isUseful: bool
+    
+    func click(){
+        print("clicking")
+    }
+    
+    func remove(){
+        print("removing")
+    }
+    
+    func turnOnBacklight(){
+        print("turning the backlight on")
+    }
+}
+
+
+class Delete: Button{
+    func doDelete(){
+        print("Deleting")
+    }
+    
+    func doDeleteWithoutReturn(){
+        print("Deleting without return")
+    }
+}
+
+class TurnOn: Button{
+    func doTurnOn(){
+        print("turning on")
+    }
+    
+    func doRestart(){
+        print("restarting")
+    }
+}
+
+
+class Clothes{
+    var material: String
+    var color: String
+    var isWithSleeve: bool
+    var isWithPrint: bool
+    
+    func putOn(){
+        print("putting on")
+    }
+    
+    func putOff(){
+        print("putting off")
+    }
+}
+
+
+class TShirt: Clothers{
+    var lengthOfSleeves: Float
+}
+
+class Trousers: Clothers{
+    var lengthOfOvershoe: Float
+    var waistLength: Float
+}
+
+
+class Cake{
+    var weight: Float
+    var taste: String
+    var cost: Float
+    
+    func sell{
+        print("selling")
+    }
+    
+    func eat{
+        print("eating")
+    }
+    
+    func buy{
+        print("buying")
+    }
+}
+
+class Cheesecake: Cake{
+    var containsOf: String
+    
+    func freeze(){
+        print("freezing")
+    }
+    
+    func changeBase(){
+        print("changing base")
+    }
+}
+
+class Biscuit: Cake{
+    var containsOf: String
+    var isChocolate: bool
+    
+    func cut(){
+        print("cutting")
+    }
+}
+
+
+// Поліморфізм
+class Button{
+    func doAction{
+        print("do some action")
+    }
+}
+
+class VolumeUp: Button{
+    override func doAction(){
+        print("increase volume")
+    }
+}
+
+class Home: Button{
+    override func doAction(){
+        print("show menu")
+    }
+}
+
+class Fruit{
+    func makeDrink(){
+        print("making drink")
+    }
+}
+
+class Apple: Fruit{
+    override func makeDrink(){
+        print("make cider")
+    }
+}
+
+class Grape: Fruit{
+    override func makeDrink(){
+        print("make wine")
+    }
+}
+
+class Toy{
+    func makeNoise(){
+        print("making noise")
+    }
+}
+
+class Doll: Toy{
+    override func makeNoise(){
+        print("cry")
+    }
+}
+
+class Cow: Toy{
+    override func makeNoise(){
+        print("say Moo")
+    }
+}
+
+
+class Pen{
+    func draw(){
+        print("draw")
+    }
+}
+
+class 3DPen: Pen{
+    override func draw(){
+        print("draw with plastic")
+    }
+}
+
+class InkPen: Pen{
+    override func draw(){
+        print("draw with ink")
+    }
+}
+
+
+class Machine{
+    func doAction(){
+        print("do some action")
+    }
+}
+
+class WashingMachine: Machine{
+    override func doAction(){
+        print("wash")
+    }
+}
+
+class DishwashingMachine: Machine{
+    override func doAction(){
+        print("wash the dishes")
+    }
+}
+
+
+private class Database{}
+
+fileprivate class Gallery{}
+
+private class cashRegister{}
+
+private class ATM{}
+
+fileprivate class Pentagon{}
