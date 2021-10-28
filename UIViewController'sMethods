@@ -1,0 +1,150 @@
+public init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?)
+Creates a view controller with the nib file in the specified bundle(з файлом nib у вказаному пакеті)
+    open func loadView()
+Creates the view that the controller manages.
+    @available(iOS 9.0, *)
+    open func loadViewIfNeeded()
+Loads the view controller’s view if it has not yet been loaded.
+    @available(iOS 9.0, *)
+    open var viewIfLoaded: UIView? { get }
+The view controller’s view, or nil if the view is not yet loaded.
+    open func viewDidLoad()
+Called after the controller's view is loaded into memory.
+    @available(iOS 3.0, *)
+    open var isViewLoaded: Bool { get }
+A Boolean value indicating whether the view is currently loaded into memory.
+    open var nibName: String? { get }
+The name of the view controller's nib file, if one was specified.
+    open var nibBundle: Bundle? { get }
+The view controller's nib bundle if it exists.
+    @available(iOS 5.0, *)
+    open var storyboard: UIStoryboard? { get }
+The storyboard from which the view controller originated.
+    @available(iOS 5.0, *)
+    open func performSegue(withIdentifier identifier: String, sender: Any?)
+Initiates the segue with the specified identifier from the current view controller's storyboard file.
+    @available(iOS 6.0, *)
+    open func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool
+Determines whether the segue with the specified identifier should be performed.
+    @available(iOS 5.0, *)
+    open func prepare(for segue: UIStoryboardSegue, sender: Any?)
+Notifies the view controller that a segue is about to be performed.
+    @available(iOS 13.0, *)
+    open func canPerformUnwindSegueAction(_ action: Selector, from fromViewController: UIViewController, sender: Any?) -> Bool
+Called on a view controller to determine whether it responds to an unwind action(чи реагує він на дію розслаблення).
+    @available(iOS, introduced: 6.0, deprecated: 13.0)
+    open func canPerformUnwindSegueAction(_ action: Selector, from fromViewController: UIViewController, withSender sender: Any) -> Bool
+Called on a view controller to determine whether it wants to respond to an unwind action.
+    @available(iOS 9.0, *)
+    open func allowedChildrenForUnwinding(from source: UIStoryboardUnwindSegueSource) -> [UIViewController]
+Returns an array of child view controllers to search for an unwind segue destination.
+    @available(iOS 9.0, *)
+    open func childContaining(_ source: UIStoryboardUnwindSegueSource) -> UIViewController?
+Returns the child view controller that contains the source of the unwind segue.
+    @available(iOS, introduced: 6.0, deprecated: 9.0)
+    open func forUnwindSegueAction(_ action: Selector, from fromViewController: UIViewController, withSender sender: Any?) -> UIViewController?
+Called when an unwind segue action wants to search a container's children for a view controller to handle the unwind action.
+    @available(iOS 9.0, *)
+    open func unwind(for unwindSegue: UIStoryboardSegue, towards subsequentVC: UIViewController)
+Called when an unwind segue transitions to a new view controller.
+    @available(iOS, introduced: 6.0, deprecated: 9.0)
+    open func segueForUnwinding(to toViewController: UIViewController, from fromViewController: UIViewController, identifier: String?) -> UIStoryboardSegue?
+Called when an unwind segue action needs to transition between two view controllers.
+    open func viewWillAppear(_ animated: Bool)
+Notifies the view controller that its view is about to be added to a view hierarchy(ієрархія).
+    open func viewDidAppear(_ animated: Bool)
+Notifies the view controller that its view was added to a view hierarchy.
+    open func viewWillDisappear(_ animated: Bool)
+Notifies the view controller that its view is about to be removed from a view hierarchy.
+    open func viewDidDisappear(_ animated: Bool)
+Notifies the view controller that its view was removed from a view hierarchy.
+    @available(iOS 5.0, *)
+    open func viewWillLayoutSubviews()
+Called to notify the view controller that its view is about to layout its subviews(розташуванням його підвидів).
+    @available(iOS 5.0, *)
+    open func viewDidLayoutSubviews()
+Called to notify the view controller that its view has just laid out its subviews.
+    open func didReceiveMemoryWarning()
+Sent to the view controller when the app receives a memory warning.
+    @available(iOS 5.0, *)
+    open var presentedViewController: UIViewController? { get }
+The view controller that is presented by this view controller, or one of its ancestors(предки) in the view controller hierarchy.
+    @available(iOS 5.0, *)
+    open var presentingViewController: UIViewController? { get }
+The view controller that presented this view controller.
+    @available(iOS 5.0, *)
+    open var definesPresentationContext: Bool
+A Boolean value that indicates whether this view controller's view is covered when the view controller or one of its descendants(нащадки) presents a view controller.
+    @available(iOS 5.0, *)
+    open var providesPresentationContextTransitionStyle: Bool
+A Boolean value that indicates whether the view controller specifies the transition style for view controllers it presents.
+    @available(iOS 10.0, *)
+    open var restoresFocusAfterTransition: Bool
+A Boolean value that indicates whether an item that previously was focused should again become focused when the item's view controller becomes visible and focusable.
+    @available(iOS 5.0, *)
+    open var isBeingPresented: Bool { get }
+A Boolean value indicating whether the view controller is being presented.
+    @available(iOS 5.0, *)
+    open var isBeingDismissed: Bool { get }
+A Boolean value indicating whether the view controller is being dismissed.
+    @available(iOS 5.0, *)
+    open var isMovingToParent: Bool { get }
+A Boolean value indicating whether the view controller is being moved to a parent view controller.
+    @available(iOS 5.0, *)
+    open var isMovingFromParent: Bool { get }
+A Boolean value indicating whether the view controller is being removed from a parent view controller.
+    @available(iOS 5.0, *)
+    open func present(_ viewControllerToPresent: UIViewController, animated flag: Bool, completion: (() -> Void)? = nil)
+Presents a view controller modally.	
+    @available(iOS 5.0, *)
+    open func dismiss(animated flag: Bool, completion: (() -> Void)? = nil)
+Dismisses the view controller that was presented modally by the view controller.
+    @available(iOS 3.0, *)
+    open var modalTransitionStyle: UIModalTransitionStyle
+The transition style to use when presenting the view controller.
+    @available(iOS 3.2, *)
+    open var modalPresentationStyle: UIModalPresentationStyle
+The presentation style for modal view controllers.
+    @available(iOS 7.0, *)
+    open var modalPresentationCapturesStatusBarAppearance: Bool
+Specifies whether a view controller, presented non-fullscreen, takes over control of status bar appearance from the presenting view controller.
+    @available(iOS 4.3, *)
+    open var disablesAutomaticKeyboardDismissal: Bool { get }
+If true, input view will remain on-screen even when non-input control is tapped.	
+    @available(iOS 7.0, *)
+    open var edgesForExtendedLayout: UIRectEdge
+The edges that you extend for your view controller.
+    @available(iOS 7.0, *)
+    open var extendedLayoutIncludesOpaqueBars: Bool
+A Boolean value indicating whether or not the extended layout includes opaque bars.	
+    @available(iOS, introduced: 7.0, deprecated: 11.0, message: "Use UIScrollView's contentInsetAdjustmentBehavior instead")
+    open var automaticallyAdjustsScrollViewInsets: Bool
+A Boolean value that indicates whether the view controller should automatically adjust its scroll view insets.
+    @available(iOS 7.0, *)
+    open var preferredContentSize: CGSize
+The preferred size for the container’s content.	
+    @available(iOS 7.0, *)
+    open var preferredStatusBarStyle: UIStatusBarStyle { get }
+The preferred status bar style for the view controller.
+
+    @available(iOS 7.0, *)
+    open var prefersStatusBarHidden: Bool { get }
+Specifies whether the view controller prefers the status bar to be hidden or shown.
+    @available(iOS 7.0, *)
+    open var preferredStatusBarUpdateAnimation: UIStatusBarAnimation { get }
+Specifies the animation style to use for hiding and showing the status bar for the view controller.
+    @available(iOS 7.0, *)
+    open func setNeedsStatusBarAppearanceUpdate()
+Indicates to the system that the view controller status bar attributes have changed.	
+    @available(iOS 8.0, *)
+    open func targetViewController(forAction action: Selector, sender: Any?) -> UIViewController?
+Returns the view controller that responds to the action.
+    @available(iOS 8.0, *)
+    open func show(_ vc: UIViewController, sender: Any?)
+Presents a view controller in a primary context.
+    @available(iOS 8.0, *)
+    open func showDetailViewController(_ vc: UIViewController, sender: Any?)
+Presents a view controller in a secondary (or detail) context.
+    @available(iOS 13.0, *)
+    open var overrideUserInterfaceStyle: UIUserInterfaceStyle
+The user interface style adopted by the view and all of its subviews.
