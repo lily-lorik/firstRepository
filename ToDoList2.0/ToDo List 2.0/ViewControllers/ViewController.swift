@@ -69,31 +69,11 @@ class ViewController: BaseViewController {
             return true
         }
         
-        if let email = emailTextField.text,
-        let password = passwordTextField.text {
-
-        if email.contains("@") {
-            if password.count >= 8 {
-              if email == expectedEmail {
-                if password == expectedPassword {
-                  resultLabel.text = "Success"
-                    return true
-                } else{
-                  resultLabel.text = "Autentification failed. Wrong password"
-                }
-              } else{
-                  resultLabel.text = "Autentification failed. Wrong email"
-              }
-            } else{
-                  resultLabel.text = "Password must have at least  8 symbols"
-              }
-            }else{
-                  resultLabel.text = "The Email adress must have @"
-              }
-        }else {
-                resultLabel.text = "Fill in fields"
-              }
-        return false
+        let credentials = LoginCredentials()
+        credentials.email = emailTextField.text
+        credentials.password = passwordTextField.text
+        
+        return credentials.validate()
     }
     
    

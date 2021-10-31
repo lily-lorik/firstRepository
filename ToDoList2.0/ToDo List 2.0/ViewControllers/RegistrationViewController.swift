@@ -24,14 +24,11 @@ class RegistrationViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
-    if let email = emailTextField.text,
-    let password = passwordTextField.text {
-
-    if email.contains("@") {
-        if password.count >= 8 {
-                return true
-        }}}
-    return false
+        let credentials = Credentials()
+        credentials.email = emailTextField.text
+        credentials.password = passwordTextField.text
+        
+        return credentials.validate()
     }
     
     @IBAction func registrationAction(_ sender: Any) {

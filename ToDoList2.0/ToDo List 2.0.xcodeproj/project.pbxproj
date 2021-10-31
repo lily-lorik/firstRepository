@@ -18,6 +18,10 @@
 		AC5DB2712728B8A800BD2D0F /* TaskListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5DB2702728B8A800BD2D0F /* TaskListViewController.swift */; };
 		AC5DB2732728B97B00BD2D0F /* TaskListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5DB2722728B97B00BD2D0F /* TaskListViewController.swift */; };
 		AC5DB2752728C5C300BD2D0F /* TaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5DB2742728C5C300BD2D0F /* TaskViewController.swift */; };
+		AC5DB27B2729D8D500BD2D0F /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5DB27A2729D8D500BD2D0F /* Credentials.swift */; };
+		AC5DB27D272EBF4B00BD2D0F /* CredentialsInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5DB27C272EBF4B00BD2D0F /* CredentialsInterface.swift */; };
+		AC5DB27F272EC3C700BD2D0F /* LoginCredentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5DB27E272EC3C700BD2D0F /* LoginCredentials.swift */; };
+		AC5DB281272EC64400BD2D0F /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5DB280272EC64400BD2D0F /* Task.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +38,10 @@
 		AC5DB2702728B8A800BD2D0F /* TaskListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListViewController.swift; sourceTree = "<group>"; };
 		AC5DB2722728B97B00BD2D0F /* TaskListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListViewController.swift; sourceTree = "<group>"; };
 		AC5DB2742728C5C300BD2D0F /* TaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewController.swift; sourceTree = "<group>"; };
+		AC5DB27A2729D8D500BD2D0F /* Credentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
+		AC5DB27C272EBF4B00BD2D0F /* CredentialsInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CredentialsInterface.swift; sourceTree = "<group>"; };
+		AC5DB27E272EC3C700BD2D0F /* LoginCredentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCredentials.swift; sourceTree = "<group>"; };
+		AC5DB280272EC64400BD2D0F /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,7 +58,6 @@
 		AC30EB382727108400DAA638 = {
 			isa = PBXGroup;
 			children = (
-				AC5DB2702728B8A800BD2D0F /* TaskListViewController.swift */,
 				AC30EB432727108400DAA638 /* ToDo List 2.0 */,
 				AC30EB422727108400DAA638 /* Products */,
 			);
@@ -67,19 +74,48 @@
 		AC30EB432727108400DAA638 /* ToDo List 2.0 */ = {
 			isa = PBXGroup;
 			children = (
+				AC5DB2792729D7DC00BD2D0F /* Controllers */,
+				AC5DB2772729D77E00BD2D0F /* Models */,
+				AC5DB2782729D7BE00BD2D0F /* ViewControllers */,
 				AC30EB442727108400DAA638 /* AppDelegate.swift */,
+				AC5DB27E272EC3C700BD2D0F /* LoginCredentials.swift */,
+				AC5DB27C272EBF4B00BD2D0F /* CredentialsInterface.swift */,
 				AC30EB462727108400DAA638 /* SceneDelegate.swift */,
-				AC30EB482727108400DAA638 /* ViewController.swift */,
-				AC5DB26C27289E0700BD2D0F /* RegistrationViewController.swift */,
-				AC5DB26A27289B6B00BD2D0F /* BaseViewController.swift */,
 				AC5DB2722728B97B00BD2D0F /* TaskListViewController.swift */,
-				AC5DB2742728C5C300BD2D0F /* TaskViewController.swift */,
 				AC30EB4A2727108400DAA638 /* Main.storyboard */,
 				AC30EB4D272711BF00DAA638 /* Assets.xcassets */,
 				AC30EB4F272711BF00DAA638 /* LaunchScreen.storyboard */,
 				AC30EB52272711BF00DAA638 /* Info.plist */,
 			);
 			path = "ToDo List 2.0";
+			sourceTree = "<group>";
+		};
+		AC5DB2772729D77E00BD2D0F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				AC5DB27A2729D8D500BD2D0F /* Credentials.swift */,
+				AC5DB280272EC64400BD2D0F /* Task.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		AC5DB2782729D7BE00BD2D0F /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				AC5DB2742728C5C300BD2D0F /* TaskViewController.swift */,
+				AC5DB26A27289B6B00BD2D0F /* BaseViewController.swift */,
+				AC5DB2702728B8A800BD2D0F /* TaskListViewController.swift */,
+				AC30EB482727108400DAA638 /* ViewController.swift */,
+				AC5DB26C27289E0700BD2D0F /* RegistrationViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		AC5DB2792729D7DC00BD2D0F /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -156,10 +192,14 @@
 				AC5DB2732728B97B00BD2D0F /* TaskListViewController.swift in Sources */,
 				AC30EB492727108400DAA638 /* ViewController.swift in Sources */,
 				AC5DB26B27289B6B00BD2D0F /* BaseViewController.swift in Sources */,
+				AC5DB27B2729D8D500BD2D0F /* Credentials.swift in Sources */,
+				AC5DB281272EC64400BD2D0F /* Task.swift in Sources */,
 				AC30EB452727108400DAA638 /* AppDelegate.swift in Sources */,
 				AC30EB472727108400DAA638 /* SceneDelegate.swift in Sources */,
+				AC5DB27D272EBF4B00BD2D0F /* CredentialsInterface.swift in Sources */,
 				AC5DB2752728C5C300BD2D0F /* TaskViewController.swift in Sources */,
 				AC5DB26D27289E0700BD2D0F /* RegistrationViewController.swift in Sources */,
+				AC5DB27F272EC3C700BD2D0F /* LoginCredentials.swift in Sources */,
 				AC5DB2712728B8A800BD2D0F /* TaskListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
