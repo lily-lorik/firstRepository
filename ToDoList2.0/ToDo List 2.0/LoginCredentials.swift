@@ -9,8 +9,16 @@
 import Foundation
 
 class LoginCredentials: Credentials {
-    let expectedEmail: String = "test@gmail.com"
-    let expectedPassword: String = "12345678"
+    
+    private var expectedEmail: String?
+    private var expectedPassword: String?
+    
+    override init(email: String?, password: String?) {
+        super.init(email: email, password: password)
+        
+        self.expectedEmail = "test@gmail.com"
+        self.expectedPassword = "12345678"
+    }
     
     override func validate() -> Bool {
         let isValid = super.validate()

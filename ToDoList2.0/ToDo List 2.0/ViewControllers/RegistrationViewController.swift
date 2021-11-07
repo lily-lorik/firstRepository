@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RegistrationViewController: UIViewController {
+class RegistrationViewController: BaseViewController {
 
     @IBOutlet weak var registrtionTextLabel: UILabel!
     @IBOutlet weak var emailTextLabel: UILabel!
@@ -24,11 +24,8 @@ class RegistrationViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
-        let credentials = Credentials()
-        credentials.email = emailTextField.text
-        credentials.password = passwordTextField.text
-        
-        return credentials.validate()
+        return Credentials(email: emailTextField.text,
+            password:  passwordTextField.text).validate()
     }
     
     @IBAction func registrationAction(_ sender: Any) {

@@ -12,6 +12,11 @@ class Credentials: CredentialsInterface{
     var email: String?
     var password: String?
     
+    init(email: String?, password: String?){
+        self.email = email
+        self.password = password
+    }
+    
     func validate() -> Bool {
         if let email = self.email,
             let password = self.password {

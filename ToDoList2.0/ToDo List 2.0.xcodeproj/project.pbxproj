@@ -22,6 +22,7 @@
 		AC5DB27D272EBF4B00BD2D0F /* CredentialsInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5DB27C272EBF4B00BD2D0F /* CredentialsInterface.swift */; };
 		AC5DB27F272EC3C700BD2D0F /* LoginCredentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5DB27E272EC3C700BD2D0F /* LoginCredentials.swift */; };
 		AC5DB281272EC64400BD2D0F /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5DB280272EC64400BD2D0F /* Task.swift */; };
+		AC5DB2832738814800BD2D0F /* TaskController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5DB2822738814800BD2D0F /* TaskController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		AC5DB27C272EBF4B00BD2D0F /* CredentialsInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CredentialsInterface.swift; sourceTree = "<group>"; };
 		AC5DB27E272EC3C700BD2D0F /* LoginCredentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCredentials.swift; sourceTree = "<group>"; };
 		AC5DB280272EC64400BD2D0F /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		AC5DB2822738814800BD2D0F /* TaskController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +116,7 @@
 		AC5DB2792729D7DC00BD2D0F /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				AC5DB2822738814800BD2D0F /* TaskController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -190,6 +193,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC5DB2732728B97B00BD2D0F /* TaskListViewController.swift in Sources */,
+				AC5DB2832738814800BD2D0F /* TaskController.swift in Sources */,
 				AC30EB492727108400DAA638 /* ViewController.swift in Sources */,
 				AC5DB26B27289B6B00BD2D0F /* BaseViewController.swift in Sources */,
 				AC5DB27B2729D8D500BD2D0F /* Credentials.swift in Sources */,
