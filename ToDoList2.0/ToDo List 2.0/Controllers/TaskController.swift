@@ -21,6 +21,10 @@ class TaskController {
     Task.init(title: "Run", description: "Description10", taskDate: Date(), createdDate: Date(), status: "Progress"),
     ]
     
+    func countTasks() -> Int{
+        return tasks.count
+    }
+    
     func add(new task: Task) {
         tasks.append(task)
     }
@@ -67,5 +71,13 @@ class TaskController {
         return tasks.filter { task in
             return task.status == status
         }
+    }
+    
+    func task(by index: Int) -> Task {
+        return task[index]
+    }
+    
+    func deleteCell(index: ) {
+        tasks.remove(at: index)
     }
 }

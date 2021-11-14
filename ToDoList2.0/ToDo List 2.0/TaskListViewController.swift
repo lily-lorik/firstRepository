@@ -8,15 +8,36 @@
 
 import UIKit
 
-class TaskListViewController: BaseViewController {
+class TaskListViewController: BaseViewController, UITableViewDataSource, UITableViewDelegate {
 
+    @IBOutlet weak var tableView: UITableView!
+    
+    let taskController = TaskController()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         navigationController?.navigationBar.isHidden = true
 
-        // Do any additional setup after loading the view.
+        tableView.delegate = self
+        tableView.dataSource = self
+        
+        tableView.register(UINib.init(nibName: "TaskTableViewCell", bundle: nil), forCellReuseIdentifier: "TaskCell")
     }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return taskController.countTasks()
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIndentifier: "TaskCell") as! TaskTableViewCell
+        
+        cell.titleLabel.text = taskController.task(by: indexPath.row).title
+        
+        return cell
+    }
+    
     
 
     /*
@@ -28,5 +49,4 @@ class TaskListViewController: BaseViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
 }
