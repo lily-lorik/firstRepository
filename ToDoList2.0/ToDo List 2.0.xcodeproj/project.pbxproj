@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AC30EB452727108400DAA638 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC30EB442727108400DAA638 /* AppDelegate.swift */; };
-		AC30EB472727108400DAA638 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC30EB462727108400DAA638 /* SceneDelegate.swift */; };
 		AC30EB492727108400DAA638 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC30EB482727108400DAA638 /* ViewController.swift */; };
 		AC30EB4C2727108400DAA638 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC30EB4A2727108400DAA638 /* Main.storyboard */; };
 		AC30EB4E272711BF00DAA638 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC30EB4D272711BF00DAA638 /* Assets.xcassets */; };
@@ -17,19 +15,19 @@
 		AC5DB26D27289E0700BD2D0F /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5DB26C27289E0700BD2D0F /* RegistrationViewController.swift */; };
 		AC5DB2752728C5C300BD2D0F /* TaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5DB2742728C5C300BD2D0F /* TaskViewController.swift */; };
 		AC5DB27B2729D8D500BD2D0F /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5DB27A2729D8D500BD2D0F /* Credentials.swift */; };
-		AC5DB27D272EBF4B00BD2D0F /* CredentialsInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5DB27C272EBF4B00BD2D0F /* CredentialsInterface.swift */; };
-		AC5DB27F272EC3C700BD2D0F /* LoginCredentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5DB27E272EC3C700BD2D0F /* LoginCredentials.swift */; };
 		AC5DB281272EC64400BD2D0F /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5DB280272EC64400BD2D0F /* Task.swift */; };
 		AC5DB2832738814800BD2D0F /* TaskController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5DB2822738814800BD2D0F /* TaskController.swift */; };
 		AC5DB2A02741A3ED00BD2D0F /* TaskTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC5DB29F2741A3ED00BD2D0F /* TaskTableViewCell.xib */; };
 		AC5DB2A22741A5FF00BD2D0F /* TTaskTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5DB2A12741A5FF00BD2D0F /* TTaskTableViewCell.swift */; };
 		AC5DB2A62741AD3100BD2D0F /* TaskListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5DB2A52741AD3100BD2D0F /* TaskListViewController.swift */; };
+		AC5DB2A82744553300BD2D0F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5DB2A72744553300BD2D0F /* SceneDelegate.swift */; };
+		AC5DB2AA2744554400BD2D0F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5DB2A92744554400BD2D0F /* AppDelegate.swift */; };
+		AC5DB2AC2744555D00BD2D0F /* LoginCredentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5DB2AB2744555C00BD2D0F /* LoginCredentials.swift */; };
+		AC5DB2AE2744556A00BD2D0F /* CredentialsInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5DB2AD2744556900BD2D0F /* CredentialsInterface.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		AC30EB412727108400DAA638 /* ToDo List 2.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ToDo List 2.0.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		AC30EB442727108400DAA638 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AC30EB462727108400DAA638 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		AC30EB482727108400DAA638 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		AC30EB4B2727108400DAA638 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AC30EB4D272711BF00DAA638 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -39,13 +37,15 @@
 		AC5DB26C27289E0700BD2D0F /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		AC5DB2742728C5C300BD2D0F /* TaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewController.swift; sourceTree = "<group>"; };
 		AC5DB27A2729D8D500BD2D0F /* Credentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
-		AC5DB27C272EBF4B00BD2D0F /* CredentialsInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CredentialsInterface.swift; sourceTree = "<group>"; };
-		AC5DB27E272EC3C700BD2D0F /* LoginCredentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCredentials.swift; sourceTree = "<group>"; };
 		AC5DB280272EC64400BD2D0F /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		AC5DB2822738814800BD2D0F /* TaskController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskController.swift; sourceTree = "<group>"; };
 		AC5DB29F2741A3ED00BD2D0F /* TaskTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TaskTableViewCell.xib; sourceTree = "<group>"; };
 		AC5DB2A12741A5FF00BD2D0F /* TTaskTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TTaskTableViewCell.swift; sourceTree = "<group>"; };
 		AC5DB2A52741AD3100BD2D0F /* TaskListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TaskListViewController.swift; path = "ToDo List 2.0/TaskListViewController.swift"; sourceTree = SOURCE_ROOT; };
+		AC5DB2A72744553300BD2D0F /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SceneDelegate.swift; path = "ToDo List 2.0/SceneDelegate.swift"; sourceTree = SOURCE_ROOT; };
+		AC5DB2A92744554400BD2D0F /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = "ToDo List 2.0/AppDelegate.swift"; sourceTree = SOURCE_ROOT; };
+		AC5DB2AB2744555C00BD2D0F /* LoginCredentials.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginCredentials.swift; path = "ToDo List 2.0/LoginCredentials.swift"; sourceTree = SOURCE_ROOT; };
+		AC5DB2AD2744556900BD2D0F /* CredentialsInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CredentialsInterface.swift; path = "ToDo List 2.0/CredentialsInterface.swift"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,10 +81,6 @@
 				AC5DB2792729D7DC00BD2D0F /* Controllers */,
 				AC5DB2772729D77E00BD2D0F /* Models */,
 				AC5DB2782729D7BE00BD2D0F /* ViewControllers */,
-				AC30EB442727108400DAA638 /* AppDelegate.swift */,
-				AC5DB27E272EC3C700BD2D0F /* LoginCredentials.swift */,
-				AC5DB27C272EBF4B00BD2D0F /* CredentialsInterface.swift */,
-				AC30EB462727108400DAA638 /* SceneDelegate.swift */,
 				AC30EB4A2727108400DAA638 /* Main.storyboard */,
 				AC30EB4D272711BF00DAA638 /* Assets.xcassets */,
 				AC30EB4F272711BF00DAA638 /* LaunchScreen.storyboard */,
@@ -97,6 +93,8 @@
 			isa = PBXGroup;
 			children = (
 				AC5DB27A2729D8D500BD2D0F /* Credentials.swift */,
+				AC5DB2AB2744555C00BD2D0F /* LoginCredentials.swift */,
+				AC5DB2AD2744556900BD2D0F /* CredentialsInterface.swift */,
 				AC5DB280272EC64400BD2D0F /* Task.swift */,
 			);
 			path = Models;
@@ -106,11 +104,11 @@
 			isa = PBXGroup;
 			children = (
 				AC5DB2A52741AD3100BD2D0F /* TaskListViewController.swift */,
-				AC5DB286273BD9A100BD2D0F /* TableCells */,
 				AC5DB2742728C5C300BD2D0F /* TaskViewController.swift */,
 				AC5DB26A27289B6B00BD2D0F /* BaseViewController.swift */,
 				AC30EB482727108400DAA638 /* ViewController.swift */,
 				AC5DB26C27289E0700BD2D0F /* RegistrationViewController.swift */,
+				AC5DB286273BD9A100BD2D0F /* TableCells */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -118,6 +116,8 @@
 		AC5DB2792729D7DC00BD2D0F /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				AC5DB2A72744553300BD2D0F /* SceneDelegate.swift */,
+				AC5DB2A92744554400BD2D0F /* AppDelegate.swift */,
 				AC5DB2822738814800BD2D0F /* TaskController.swift */,
 			);
 			path = Controllers;
@@ -204,19 +204,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC5DB2AC2744555D00BD2D0F /* LoginCredentials.swift in Sources */,
+				AC5DB2AA2744554400BD2D0F /* AppDelegate.swift in Sources */,
 				AC5DB2832738814800BD2D0F /* TaskController.swift in Sources */,
 				AC30EB492727108400DAA638 /* ViewController.swift in Sources */,
 				AC5DB26B27289B6B00BD2D0F /* BaseViewController.swift in Sources */,
 				AC5DB27B2729D8D500BD2D0F /* Credentials.swift in Sources */,
+				AC5DB2AE2744556A00BD2D0F /* CredentialsInterface.swift in Sources */,
 				AC5DB281272EC64400BD2D0F /* Task.swift in Sources */,
-				AC30EB452727108400DAA638 /* AppDelegate.swift in Sources */,
+				AC5DB2A82744553300BD2D0F /* SceneDelegate.swift in Sources */,
 				AC5DB2A62741AD3100BD2D0F /* TaskListViewController.swift in Sources */,
-				AC30EB472727108400DAA638 /* SceneDelegate.swift in Sources */,
 				AC5DB2A22741A5FF00BD2D0F /* TTaskTableViewCell.swift in Sources */,
-				AC5DB27D272EBF4B00BD2D0F /* CredentialsInterface.swift in Sources */,
 				AC5DB2752728C5C300BD2D0F /* TaskViewController.swift in Sources */,
 				AC5DB26D27289E0700BD2D0F /* RegistrationViewController.swift in Sources */,
-				AC5DB27F272EC3C700BD2D0F /* LoginCredentials.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

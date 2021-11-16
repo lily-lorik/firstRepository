@@ -9,7 +9,8 @@
 import Foundation
 
 class TaskController {
-    private var tasks: [Task] = [Task.init(title: "Some title", description: "Description1", taskDate: Date(), createdDate: Date(), status: "Done"),
+    private var tasks: [Task] = [
+    Task.init(title: "Some title", description: "Description1", taskDate: Date(), createdDate: Date(), status: "Done"),
     Task.init(title: "1 Some title", description: "Description2", taskDate: Date(), createdDate: Date(), status: "Progress"),
     Task.init(title: "2 Some title", description: "Description3", taskDate: Date(), createdDate: Date(), status: "Progress"),
     Task.init(title: "3 Some title", description: "Description4", taskDate: Date(), createdDate: Date(), status: "Progress"),
@@ -55,15 +56,26 @@ class TaskController {
         tasks.sort { task1, task2 in
             task1.taskDate < task2.taskDate
         }
-        
         return tasks
     }
     
-    func sortByTitleLetterA() -> [Task] {
-        tasks.sort { task1, task2 in
-            task1.title < task2.title
+    func checkForOptional(tasks: [Task]) -> Bool {
+        for task in tasks {
+            if (task.title != nil) {
+            continue
+            } else {
+                return false
+            }
         }
-        
+        return true
+    }
+    
+    func sortByTitleLetterA() -> [Task] {
+        if checkForOptional(tasks: tasks){
+        tasks.sort { task1, task2 in
+            (task1.title)! < (task2.title)!
+            }
+        }
         return tasks
     }
     
@@ -74,10 +86,10 @@ class TaskController {
     }
     
     func task(by index: Int) -> Task {
-        return task[index]
+        return tasks[index]
     }
     
-    func deleteCell(index: ) {
+    func deleteCell(by index: Int) {
         tasks.remove(at: index)
     }
 }

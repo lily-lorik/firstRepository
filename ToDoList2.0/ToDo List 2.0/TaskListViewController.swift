@@ -31,7 +31,7 @@ class TaskListViewController: BaseViewController, UITableViewDataSource, UITable
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIndentifier: "TaskCell") as! TaskTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "TaskCell") as! TaskTableViewCell
         
         cell.titleLabel.text = taskController.task(by: indexPath.row).title
         
