@@ -59,7 +59,9 @@ class TaskController {
         return tasks
     }
     
-    func checkForOptional(tasks: [Task]) -> Bool {
+    // checking for optionals for right work of method sortByTitleLetterA
+    //warning! this checking works only for task.title
+    func checkIfTitleIsOptional(tasks: [Task]) -> Bool {
         for task in tasks {
             if (task.title != nil) {
             continue
@@ -71,7 +73,7 @@ class TaskController {
     }
     
     func sortByTitleLetterA() -> [Task] {
-        if checkForOptional(tasks: tasks){
+        if checkIfTitleIsOptional(tasks: tasks){
         tasks.sort { task1, task2 in
             (task1.title)! < (task2.title)!
             }
