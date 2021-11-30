@@ -20,6 +20,10 @@
 		AC5DB2E227471A2800BD2D0F /* PlanModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5DB2E127471A2800BD2D0F /* PlanModel.swift */; };
 		AC5DB2E6274AA43700BD2D0F /* HomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5DB2E5274AA43700BD2D0F /* HomeScreenViewController.swift */; };
 		ACE7EFA0274ADDBB007793FB /* AddDishesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE7EF9F274ADDBB007793FB /* AddDishesViewController.swift */; };
+		ACE7EFA6274D8C14007793FB /* ProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE7EFA4274D8C14007793FB /* ProductTableViewCell.swift */; };
+		ACE7EFA7274D8C14007793FB /* ProductTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACE7EFA5274D8C14007793FB /* ProductTableViewCell.xib */; };
+		ACE7EFAA27504997007793FB /* WeightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE7EFA927504997007793FB /* WeightViewController.swift */; };
+		ACE7EFAE27504A7B007793FB /* HeightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE7EFAD27504A7B007793FB /* HeightViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +42,10 @@
 		AC5DB2E127471A2800BD2D0F /* PlanModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanModel.swift; sourceTree = "<group>"; };
 		AC5DB2E5274AA43700BD2D0F /* HomeScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewController.swift; sourceTree = "<group>"; };
 		ACE7EF9F274ADDBB007793FB /* AddDishesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDishesViewController.swift; sourceTree = "<group>"; };
+		ACE7EFA4274D8C14007793FB /* ProductTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTableViewCell.swift; sourceTree = "<group>"; };
+		ACE7EFA5274D8C14007793FB /* ProductTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductTableViewCell.xib; sourceTree = "<group>"; };
+		ACE7EFA927504997007793FB /* WeightViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightViewController.swift; sourceTree = "<group>"; };
+		ACE7EFAD27504A7B007793FB /* HeightViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeightViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +95,8 @@
 		AC5DB2D12745B84200BD2D0F /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				ACE7EFAC27504A4D007793FB /* HeightViewController */,
+				ACE7EFA82750492D007793FB /* WeightViewController */,
 				AC5DB2D52745B8B100BD2D0F /* AddDishesViewController */,
 				AC5DB2D42745B89F00BD2D0F /* HomeScreenViewController */,
 				AC5DB2D32745B87A00BD2D0F /* MealPlanViewController */,
@@ -113,6 +123,7 @@
 		AC5DB2D42745B89F00BD2D0F /* HomeScreenViewController */ = {
 			isa = PBXGroup;
 			children = (
+				ACE7EFA3274D8BD7007793FB /* Cells */,
 				AC5DB2E5274AA43700BD2D0F /* HomeScreenViewController.swift */,
 			);
 			path = HomeScreenViewController;
@@ -142,6 +153,31 @@
 				AC5DB2DD274714D000BD2D0F /* UserManager.swift */,
 			);
 			path = Manager;
+			sourceTree = "<group>";
+		};
+		ACE7EFA3274D8BD7007793FB /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				ACE7EFA4274D8C14007793FB /* ProductTableViewCell.swift */,
+				ACE7EFA5274D8C14007793FB /* ProductTableViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		ACE7EFA82750492D007793FB /* WeightViewController */ = {
+			isa = PBXGroup;
+			children = (
+				ACE7EFA927504997007793FB /* WeightViewController.swift */,
+			);
+			path = WeightViewController;
+			sourceTree = "<group>";
+		};
+		ACE7EFAC27504A4D007793FB /* HeightViewController */ = {
+			isa = PBXGroup;
+			children = (
+				ACE7EFAD27504A7B007793FB /* HeightViewController.swift */,
+			);
+			path = HeightViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -203,6 +239,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC5DB2C82744769A00BD2D0F /* LaunchScreen.storyboard in Resources */,
+				ACE7EFA7274D8C14007793FB /* ProductTableViewCell.xib in Resources */,
 				AC5DB2C52744769A00BD2D0F /* Assets.xcassets in Resources */,
 				AC5DB2C32744769600BD2D0F /* Main.storyboard in Resources */,
 			);
@@ -215,11 +252,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACE7EFAA27504997007793FB /* WeightViewController.swift in Sources */,
+				ACE7EFAE27504A7B007793FB /* HeightViewController.swift in Sources */,
 				AC5DB2DE274714D000BD2D0F /* UserManager.swift in Sources */,
 				AC5DB2C02744769600BD2D0F /* ViewController.swift in Sources */,
 				ACE7EFA0274ADDBB007793FB /* AddDishesViewController.swift in Sources */,
 				AC5DB2BC2744769600BD2D0F /* AppDelegate.swift in Sources */,
 				AC5DB2BE2744769600BD2D0F /* SceneDelegate.swift in Sources */,
+				ACE7EFA6274D8C14007793FB /* ProductTableViewCell.swift in Sources */,
 				AC5DB2DA2745C37400BD2D0F /* UserModel.swift in Sources */,
 				AC5DB2E6274AA43700BD2D0F /* HomeScreenViewController.swift in Sources */,
 				AC5DB2D72745B8F700BD2D0F /* UserDataViewController.swift in Sources */,

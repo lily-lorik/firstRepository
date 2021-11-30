@@ -11,32 +11,73 @@ import UIKit
 class HomeScreenViewController: UIViewController {
 
     @IBOutlet weak var planProductsTable: UITableView!
-    @IBOutlet weak var eatenProductsTable: UITableView!
     @IBOutlet weak var totalCaloriesLabel: UILabel!
+    
+    var products = UserManager.shared.user!.plan!.products
+    var listOfEatenProducts: [Product] = []
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        prepareTableView()
+        planProductsTable.isEditing = true
+        
+        totalCaloriesLabel.text = "Total Calories: \(self.calculateTotalCalories())"
+    }
+    
+    func prepareTableView(){
+        planProductsTable.delegate = self
+        planProductsTable.dataSource = self
+        
+        planProductsTable.register(.init(nibName: "ProductTableViewCell", bundle: nil), forCellReuseIdentifier: "ProductTableViewCell")
+    }
+    
+override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    
+    if let vc = segue.destination as? AddDishesViewController {
+        vc.completion = { (product) in
+            self.listOfEatenProducts.append(product)
+            self.planProductsTable.reloadData()
+        }
+        }
+    }
+    
+    func calculateTotalCalories() -> Int {
+        return listOfEatenProducts.map({($0.calories!)}).reduce(0, +)
     }
 }
 
-extension ViewController: UITableViewDelegate{
+extension HomeScreenViewController: UITableViewDataSource, UITableViewDelegate {
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 2
     }
-}
-extension ViewController: UITableViewDataSource {
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        
-        cell.textLabel?.text = UserManager.shared.user!.plan!.products[indexPath.row]
-        
-        return cell
-    }
-    
-    
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return UserManager.shared.user!.plan!.products.count
+        if section == 0{
+            return products.count
+        } else {
+            return listOfEatenProducts.count
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        if section == 0 {
+            return "Your meal plan"
+        } else {
+            return "Todays meal"
+        }
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ProductTableViewCell", for: indexPath) as!
+        ProductTableViewCell
+        cell.fill(with: products[indexPath.row])
+    return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 80
     }
 }

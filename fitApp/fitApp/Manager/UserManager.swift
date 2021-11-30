@@ -18,17 +18,17 @@ class UserManager {
     var tropicalDiet: PlanModel = PlanModel.init(planType: "tropical Diet")
     var chocolateDiet: PlanModel = PlanModel.init(planType: "Chocolate diet")
     var vegetableDiet: PlanModel = PlanModel.init(planType: "vegetable Diet")
-
+    
     func choosePlan(){
         guard let user = user else {return}
-        let isNormalWeight: Bool = user.currentWeight! <= user.currentHeight! - 90.0 && user.currentWeight! >= user.currentHeight! - 120.0
+        let isNormalWeight: Bool = user.currentWeight! <= user.currentHeight! - 90 && user.currentWeight! >= user.currentHeight! - 120
         
         if isNormalWeight{
             user.plan = user.isGetWeight! ? getWeightPlan: loseWeightPlan
         }else{
-            if user.currentWeight! <= user.currentHeight! - 120.0{
+            if user.currentWeight! <= user.currentHeight! - 120{
                 user.plan = getWeightPlan
-            } else if user.currentWeight! >= user.currentHeight! - 90.0{
+            } else if user.currentWeight! >= user.currentHeight! - 90{
                 user.plan = loseWeightPlan
             }
         }
@@ -40,10 +40,10 @@ class UserManager {
         let daysOfDiet = user.period! * 30
         let caloriesInKilogram = 7716
         if user.isGetWeight! {
-            let caloriesMustGet = (Int(user.currentWeight! - (user.currentHeight! - 120.0)) * caloriesInKilogram) / daysOfDiet
+            let caloriesMustGet = (Int(user.currentWeight! - (user.currentHeight! - 120)) * caloriesInKilogram) / daysOfDiet
             let caloriesPerDay = user.calories! + caloriesMustGet
         } else {
-            let caloriesToLose = (Int((user.currentHeight! - 90.0) - user.currentWeight!) * caloriesInKilogram) / daysOfDiet
+            let caloriesToLose = (Int((user.currentHeight! - 90) - user.currentWeight!) * caloriesInKilogram) / daysOfDiet
             let caloriesPerDay = user.calories! - caloriesToLose
         }
     }
