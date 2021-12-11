@@ -22,8 +22,9 @@
 		AC5DB2A62741AD3100BD2D0F /* TaskListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5DB2A52741AD3100BD2D0F /* TaskListViewController.swift */; };
 		AC5DB2A82744553300BD2D0F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5DB2A72744553300BD2D0F /* SceneDelegate.swift */; };
 		AC5DB2AA2744554400BD2D0F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5DB2A92744554400BD2D0F /* AppDelegate.swift */; };
-		AC5DB2AC2744555D00BD2D0F /* LoginCredentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5DB2AB2744555C00BD2D0F /* LoginCredentials.swift */; };
 		AC5DB2AE2744556A00BD2D0F /* CredentialsInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5DB2AD2744556900BD2D0F /* CredentialsInterface.swift */; };
+		ACE7EFB327640466007793FB /* CredentialsError.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE7EFB227640466007793FB /* CredentialsError.swift */; };
+		ACE7EFB527640A79007793FB /* CredentialController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE7EFB427640A79007793FB /* CredentialController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,8 +45,9 @@
 		AC5DB2A52741AD3100BD2D0F /* TaskListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TaskListViewController.swift; path = "ToDo List 2.0/TaskListViewController.swift"; sourceTree = SOURCE_ROOT; };
 		AC5DB2A72744553300BD2D0F /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SceneDelegate.swift; path = "ToDo List 2.0/SceneDelegate.swift"; sourceTree = SOURCE_ROOT; };
 		AC5DB2A92744554400BD2D0F /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = "ToDo List 2.0/AppDelegate.swift"; sourceTree = SOURCE_ROOT; };
-		AC5DB2AB2744555C00BD2D0F /* LoginCredentials.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginCredentials.swift; path = "ToDo List 2.0/LoginCredentials.swift"; sourceTree = SOURCE_ROOT; };
 		AC5DB2AD2744556900BD2D0F /* CredentialsInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CredentialsInterface.swift; path = "ToDo List 2.0/CredentialsInterface.swift"; sourceTree = SOURCE_ROOT; };
+		ACE7EFB227640466007793FB /* CredentialsError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CredentialsError.swift; sourceTree = "<group>"; };
+		ACE7EFB427640A79007793FB /* CredentialController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CredentialController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,7 +95,6 @@
 			isa = PBXGroup;
 			children = (
 				AC5DB27A2729D8D500BD2D0F /* Credentials.swift */,
-				AC5DB2AB2744555C00BD2D0F /* LoginCredentials.swift */,
 				AC5DB2AD2744556900BD2D0F /* CredentialsInterface.swift */,
 				AC5DB280272EC64400BD2D0F /* Task.swift */,
 			);
@@ -116,9 +117,11 @@
 		AC5DB2792729D7DC00BD2D0F /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				ACE7EFB1276403CC007793FB /* New Group */,
 				AC5DB2A72744553300BD2D0F /* SceneDelegate.swift */,
 				AC5DB2A92744554400BD2D0F /* AppDelegate.swift */,
 				AC5DB2822738814800BD2D0F /* TaskController.swift */,
+				ACE7EFB427640A79007793FB /* CredentialController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -130,6 +133,14 @@
 				AC5DB29F2741A3ED00BD2D0F /* TaskTableViewCell.xib */,
 			);
 			path = TableCells;
+			sourceTree = "<group>";
+		};
+		ACE7EFB1276403CC007793FB /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				ACE7EFB227640466007793FB /* CredentialsError.swift */,
+			);
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -204,11 +215,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AC5DB2AC2744555D00BD2D0F /* LoginCredentials.swift in Sources */,
 				AC5DB2AA2744554400BD2D0F /* AppDelegate.swift in Sources */,
+				ACE7EFB527640A79007793FB /* CredentialController.swift in Sources */,
 				AC5DB2832738814800BD2D0F /* TaskController.swift in Sources */,
 				AC30EB492727108400DAA638 /* ViewController.swift in Sources */,
 				AC5DB26B27289B6B00BD2D0F /* BaseViewController.swift in Sources */,
+				ACE7EFB327640466007793FB /* CredentialsError.swift in Sources */,
 				AC5DB27B2729D8D500BD2D0F /* Credentials.swift in Sources */,
 				AC5DB2AE2744556A00BD2D0F /* CredentialsInterface.swift in Sources */,
 				AC5DB281272EC64400BD2D0F /* Task.swift in Sources */,

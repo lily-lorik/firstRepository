@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: BaseViewController {
+class ViewController: BaseViewController, UITextFieldDelegate {
     
     @IBOutlet weak var toDoListLabel: UILabel!
     @IBOutlet weak var emailTextLabel: UILabel!
@@ -28,6 +28,8 @@ class ViewController: BaseViewController {
         print("viewDidLoad")
         
         self.backgroundColor = .blue
+        emailTextField.delegate = self
+        passwordTextField.delegate = self
         
         resultLabel = UILabel.init()
         resultLabel.text = "ResultLabel"
@@ -69,11 +71,22 @@ class ViewController: BaseViewController {
             return true
         }
         
-        return LoginCredentials(email: emailTextField.text,
-                                password: passwordTextField.text).validate()
+        let credentialController = CredentialController(credentials: Credentials(email: emailTextField.text, password: passwordTextField.text))
+        
+        do{
+            try credentialController.validate()
+            try credentialController.checkCredentials()
+            return true
+        } catch {
+            resultLabel.text = (error as! CredetialsError).description
+            return false
+        }
     }
     
-   
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        view.endEditing(true)
+        return true
+    }
 
 
 }

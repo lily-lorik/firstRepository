@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RegistrationViewController: BaseViewController {
+class RegistrationViewController: BaseViewController, UITextFieldDelegate {
 
     @IBOutlet weak var registrtionTextLabel: UILabel!
     @IBOutlet weak var emailTextLabel: UILabel!
@@ -17,30 +17,33 @@ class RegistrationViewController: BaseViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var registrationButton: UIButton!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        emailTextField.delegate = self
+        passwordTextField.delegate = self
     }
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
-        return Credentials(email: emailTextField.text,
-            password:  passwordTextField.text).validate()
+        
+        let credentialController = CredentialController(credentials: Credentials(email: emailTextField.text, password: passwordTextField.text))
+        
+        do{
+            try credentialController.validate()
+            try credentialController.checkCredentials()
+            return true
+        } catch {
+            registrtionTextLabel.text = (error as! CredetialsError).description
+            return false
+        }
     }
     
     @IBAction func registrationAction(_ sender: Any) {
         
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        view.endEditing(true)
+        return true
     }
-    */
 
 }
