@@ -1,0 +1,151 @@
+App Delegate:
+applicationDidFinishLaunching(_:)
+Tells the delegate when the app has finished launching (запуск).
+application(_:willFinishLaunchingWithOptions:)
+Tells the delegate that the launch process has begun but that state restoration(відновлення) has not yet occurred(сталося).
+application(_:didFinishLaunchingWithOptions:)
+Tells the delegate that the launch process is almost done and the app is almost ready to run.
+applicationDidBecomeActive(_:)
+Tells the delegate that the app has become active.
+applicationWillResignActive(_:)
+Tells the delegate that the app is about to become inactive.
+application(_:handleOpen:)
+Asks the delegate to open a resource identified by URL.
+application(_:open:sourceApplication:annotation:)
+Asks the delegate to open a resource identified by a URL.
+application(_:open:options:)
+Asks the delegate to open a resource specified by a URL, and provides a dictionary of launch options.
+applicationDidReceiveMemoryWarning(_:)
+Tells the delegate when the app receives a memory warning from the system.
+applicationWillTerminate(_:)
+Tells the delegate when the app is about to terminate(збирається припинити).
+applicationSignificantTimeChange(_:)
+Tells the delegate when there is a significant(значний) change in the time.
+application(_:willChangeStatusBarOrientation:duration:)
+Tells the delegate when the interface orientation of the status bar is about to change.
+application(_:didChangeStatusBarOrientation:)
+Tells the delegate when the interface orientation of the status bar has changed.
+application(_:willChangeStatusBarFrame:)
+Tells the delegate when the frame of the status bar is about to change.
+application(_:didChangeStatusBarFrame:)
+Tells the delegate when the frame of the status bar has changed.
+application(_:didRegister:)
+Called to tell the delegate the types of local and remote notifications that can be used to get the user’s attention.
+application(_:didRegisterForRemoteNotificationsWithDeviceToken:)
+Tells the delegate that the app successfully registered with Apple Push Notification service (APNs).
+application(_:didFailToRegisterForRemoteNotificationsWithError:)
+Sent to the delegate when Apple Push Notification service cannot successfully complete the registration process.
+application(_:didReceiveRemoteNotification:fetchCompletionHandler:)
+Tells the app that a remote notification arrived that indicates there is data to be fetched.
+application(_:handleActionWithIdentifier:for:withResponseInfo:completionHandler:)
+Called when your app has been activated by the user selecting an action from a local notification.
+application(_:handleActionWithIdentifier:forRemoteNotification:withResponseInfo:completionHandler:)
+Called when your app has been activated by the user selecting an action from a remote notification.
+application(_:handleActionWithIdentifier:forRemoteNotification:completionHandler:)
+Tells the app delegate to perform the custom action specified by a remote notification.
+application(_:performFetchWithCompletionHandler:)
+Tells the app that it can begin a fetch operation if it has data to download.
+application(_:performActionFor:completionHandler:)
+Tells the delegate that the user selected a Home screen quick action for your app, except when you’ve intercepted the interaction in a launch method(перехопив взаємодію методом запуску).
+application(_:handleEventsForBackgroundURLSession:completionHandler:)
+Tells the delegate that events related to a URL session are waiting to be processed.
+application(_:handleWatchKitExtensionRequest:reply:)
+Asks the delegate to respond to a request from a paired watchOS app.
+applicationShouldRequestHealthAuthorization(_:)
+Tells the delegate when your app should ask the user for access to his or her HealthKit data.
+application(_:handle:completionHandler:)
+Asks the delegate to handle the specified SiriKit intent directly.
+applicationDidEnterBackground(_:)
+Tells the delegate that the app is now in the background.
+applicationWillEnterForeground(_:)
+Tells the delegate that the app is about to enter the foreground(передньому плані).
+applicationProtectedDataWillBecomeUnavailable(_:)
+Tells the delegate that the protected files are about to become unavailable.
+applicationProtectedDataDidBecomeAvailable(_:)
+Tells the delegate that protected files are available now.
+application(_:supportedInterfaceOrientationsFor:)
+Asks the delegate for the interface orientations to use for the view controllers in the specified window.
+application(_:shouldAllowExtensionPointIdentifier:)
+Asks the delegate to grant permission to use app extensions that are based on a specified extension point identifier.
+application(_:viewControllerWithRestorationIdentifierPath:coder:)
+Asks the delegate to provide the specified view controller.
+application(_:shouldSaveSecureApplicationState:)
+Asks the delegate whether to securely preserve the app’s state.
+application(_:shouldRestoreSecureApplicationState:)
+Asks the delegate whether to restore the app’s saved state.
+application(_:willEncodeRestorableStateWith:)
+Tells your delegate to save any high-level state information at the beginning of the state preservation process.
+application(_:didDecodeRestorableStateWith:)
+Tells your delegate to restore any high-level state information as part of the state restoration process.
+application(_:shouldSaveApplicationState:)
+Asks the delegate whether to preserve the app’s state.
+application(_:shouldRestoreApplicationState:)
+Asks the delegate whether to restore the app’s saved state.
+application(_:willContinueUserActivityWithType:)
+Tells the delegate if your app takes responsibility for notifying users when a continuation activity takes longer than expected.
+application(_:continue:restorationHandler:)
+Tells the delegate that the data for continuing an activity is available.
+application(_:didFailToContinueUserActivityWithType:error:)
+Tells the delegate that the activity could not be continued.
+application(_:didUpdate:)
+Tells the delegate that the activity was updated.
+application(_:userDidAcceptCloudKitShareWith:)
+Tells the delegate that the app now has access to shared information in CloudKit.
+application(_:configurationForConnecting:options:)
+Retrieves the configuration data for UIKit to use when creating a new scene.
+application(_:didDiscardSceneSessions:)
+Tells the delegate that the user closed one or more of the app's scenes from the app switcher.
+setStatusBarOrientation(_:animated:)
+Sets the app's status bar to the specified orientation, optionally animating the transition.
+setStatusBarStyle(_:animated:)
+Sets the style of the status bar, optionally animating the transition to the new style.
+setStatusBarHidden(_:with:)
+Hides or shows the status bar, optionally animating the transition.
+setKeepAliveTimeout(_:handler:)
+Configures a periodic handler for VoIP apps in older versions of iOS.
+
+Scene Delegate:
+resignFirstResponder()
+Notifies this object that it has been asked to relinquish(відмовитися) its status as first responder in its window.
+touchesBegan(_:with:)
+Tells this object that one or more new touches occurred in a view or window.
+touchesEnded(_:with:)
+Tells the responder when one or more fingers are raised from a view or window.
+touchesCancelled(_:with:)
+Tells the responder when a system event (such as a system alert) cancels a touch sequence.
+touchesEstimatedPropertiesUpdated(_:)
+Tells the responder that updated values were received for previously estimated properties or that an update is no longer expected.
+pressesBegan(_:with:)
+Tells this object when a physical button is first pressed.
+pressesChanged(_:with:)
+Tells this object when a value associated with a press has changed.
+pressesEnded(_:with:)
+Sent to the receiver when a button is released from the associated view(звільнено від пов'язаного подання).
+pressesCancelled(_:with:)
+Sent to the receiver when a system event (such as a low-memory warning) cancels a press event.
+motionBegan(_:with:)
+Tells the receiver that a motion event has begun.
+motionEnded(_:with:)
+Tells the receiver that a motion event has ended.
+motionCancelled(_:with:)
+Tells the receiver that a motion event has been cancelled.
+remoteControlReceived(with:)
+Tells the object when a remote-control event is received.
+canPerformAction(_:withSender:)
+Requests the receiving responder to enable or disable the specified command in the user interface.
+target(forAction:withSender:)
+Returns the target object that responds to an action.
+buildMenu(with:)
+Asks the receiving responder to add and remove items from a menu system.
+validate(_:)
+Asks the receiving responder to validate(перевірити) the command.
+reloadInputViews()
+Updates the custom input and accessory views when the object is the first responder.
+updateUserActivityState(_:)
+Updates the state of the given user activity.
+touchesMoved(_:with:)
+Tells the responder when one or more touches associated with an event changed.
+pressesBegan(_:with:)
+Sent to the receiver when a physical button is pressed in the associated view.
+restoreUserActivityState(_:)
+Restores the state needed to continue the given user activity.

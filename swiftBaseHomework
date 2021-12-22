@@ -1,0 +1,88 @@
+import Foundation
+
+// first task
+func plus(num1: Double, num2: Float) -> Double{
+    return (num1 + Double(num2))
+}
+
+var a = plus(num1: 5.7, num2: 8.3)
+print(a)
+
+func minus(num1: Double, num2: Float) -> Double{
+    return (num1 - Double(num2))
+}
+
+var b = minus(num1: 5.7, num2: 8.3)
+print(b)
+
+func percent(num1: Double, num2: Float) -> Int{
+    return Int(num1) % Int(num2)
+}
+
+var c = percent(num1: 5.7, num2: 8.3)
+print(c)
+
+//second task
+func check(_ value: Int) {
+  if value > 100 {
+    print("\(value) > 100")
+  } else {
+    print("\(value) > 100")
+  }
+}
+
+check(20)
+
+//third task
+func calc(value1: Int, value2: Float) -> (Double, Double, Double){
+  let sum: Double = Double(value1) + Double(value2)
+  let divide: Double = Double(value2) / Double(value1)
+  let minus: Double = Double(value2) - Double(value1)
+  return(sum, divide, minus)
+  }
+
+
+print(calc(value1: 20, value2: 5.5))
+
+//forth task
+func optionalPlus(value1: Int?, value2: Int?){
+    if value1 == nil || value2 == nil{
+        print("nil")
+    } else{
+        print("\(value1! + value2!)")
+    }
+}
+optionalPlus(value1: nil, value2: 5)
+
+//fifth task
+import Foundation
+
+var string: String = "helLo, m,.y dEar... neighbour!."
+
+string = string.lowercased()
+
+let arrForUpCase = [".", "!", "?"]
+let arrForSpace = ["!", ".", ",", ";", ")", "?", "%", "&", "<", ">"]
+
+var i = 0
+while i < string.count {
+    string = string.replacingOccurrences(of: "..", with: ".")
+    i += 1
+}
+string = string.prefix(1).capitalized + string.dropFirst()
+
+
+print(string)
+
+//sixth task
+
+var integers: [Int?] =  [5,4,-2,0,2]
+
+integers = integers.filter($0 != nil)
+integers = integers.sorted(by: $0 > $1)
+
+(integers[0], integers[integers.count - 1]) = (integers[integers.count - 1], integers[0])
+
+print(integers)
+
+//seventh task
